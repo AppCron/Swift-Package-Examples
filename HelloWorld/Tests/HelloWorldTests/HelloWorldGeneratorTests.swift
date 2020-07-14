@@ -16,4 +16,15 @@ class HelloWorldGeneratorTests: XCTestCase {
         XCTAssertEqual(greeting, "Hello Tim Apple!")
     }
 
+    func testCreateHello_returnsNil_whenNameIsEmpty() {
+        // Arrange
+        let emptyString = ""
+
+        // Act
+        let greeting = generator.createHello(withName: emptyString)
+
+        // Assert
+        XCTAssertEqual(greeting, nil)
+    }
+
 }
