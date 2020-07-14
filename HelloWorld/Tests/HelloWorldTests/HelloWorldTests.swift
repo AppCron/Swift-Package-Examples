@@ -8,8 +8,4 @@ final class HelloWorldTests: XCTestCase {
         // results.
         XCTAssertEqual(HelloWorld().text, "Hello, World!")
     }
-
-    static var allTests = [
-        ("testExample", testExample),
-    ]
 }
