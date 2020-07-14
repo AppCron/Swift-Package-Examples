@@ -1,6 +1,6 @@
-class HelloWorldGenerator {
+public class HelloWorldGenerator {
 
-    func createHello(withName name: String) -> String? {
+    public func createHello(withName name: String) -> String? {
         guard name.count > 0 else {
             return nil
         }
@@ -9,4 +9,3 @@ class HelloWorldGenerator {
     }
 
 }
-
