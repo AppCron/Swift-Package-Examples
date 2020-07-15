@@ -23,3 +23,16 @@ Collection of examples creating and using Swift Packages and the Swift Package M
 - Added `.iOS(.v13)` as plattform.
 - Added `HelloWorld` package as dependency.
 - Implemented basic functionality.
+
+## MultiPackage Swift Package
+- Created by hand, with two products and two targets.
+- Using different names for folder, package, targets and products.
+- Added as dependency to the HelloLabel package.
+    - Because of the differnt names and multiple products, the definition of dependecy is bit more complex.
+    - See commit [9dc83ad7](https://github.com/AppCron/Swift-Package-Examples/commit/9dc83ad71bc616a66d2316d6f8d06b3afff74a13)
+- Insights gathered from this experience:
+    - Under `dependencies` you have the mention to location of the package.
+        - You also have to mention the package name if it is differnt from the folder name.
+    - Under `target/dependencies` you have to name the product.
+        - You also have to name the package if it has a different name or if there are multiple products withint the same package.
+    - When using the `import` statement in your code, you have to mention the module, which is identical to the target.
