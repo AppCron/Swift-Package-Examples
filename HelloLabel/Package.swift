@@ -11,10 +11,13 @@ let package = Package(
             name: "HelloLabel",
             targets: ["HelloLabel"]),
     ],
+    dependencies: [
+        .package(path: "../HelloWorld")
+    ],
     targets: [
         .target(
             name: "HelloLabel",
-            dependencies: []),
+            dependencies: ["HelloWorld"])
     ]
 )
 
