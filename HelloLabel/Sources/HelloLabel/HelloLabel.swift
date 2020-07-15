@@ -1,3 +1,5 @@
-public class HelloLabel {
+import UIKit
+
+public class HelloLabel: UILabel {
 
 }
