@@ -12,12 +12,17 @@ let package = Package(
             targets: ["HelloLabel"]),
     ],
     dependencies: [
-        .package(path: "../HelloWorld")
+        .package(path: "../HelloWorld"),
+
+        //explicit name required, since folder and package names are different
+        .package(name: "MultiPackageName", path: "../MultiPackage")
     ],
     targets: [
         .target(
             name: "HelloLabel",
-            dependencies: ["HelloWorld"])
+            dependencies: ["HelloWorld",
+                           // Explicit name and package required, since package and product names are different
+                           .product(name: "MultiPackageLibOne", package: "MultiPackageName")])
     ]
 )
 
